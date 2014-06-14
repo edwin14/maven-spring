@@ -11,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @Configuration
 @ComponentScan("com.edwin.web")
+
 public class WebAppConfig extends WebMvcConfigurerAdapter{
     
 }

@@ -9,6 +9,9 @@
 
   <name>mavenspring</name>
   <url>http://maven.apache.org</url>
+  <properties>
+      <spring.version >4.0.5.RELEASE</spring.version>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -26,12 +29,12 @@
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>4.0.5.RELEASE</version>
+        <version>${spring.version}</version>
     </dependency>
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
-        <version>4.0.5.RELEASE</version>
+        <version>${spring.version}</version>
     </dependency>
   </dependencies>
 
