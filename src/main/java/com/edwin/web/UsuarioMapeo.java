@@ -59,6 +59,13 @@ public class UsuarioMapeo {
         return "UsuarioMapeo{" + "login=" + login + ", password=" + password + ", admin_rol=" + admin_rol + '}';
     }
 
+    /**
+     * Este constructor inicializa un objeto de tipo usuario a generarse como mapeo a la tabla usuario
+     * 
+     * @param login Mapeo a la columna login
+     * @param password Mapeo a la columna password
+     * @param admin_rol Mapeo a la columna admin_rol
+     */
     public UsuarioMapeo(String login, String password, Character admin_rol) {
         this.login = login;
         this.password = password;
