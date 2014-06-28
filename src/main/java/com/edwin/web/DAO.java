@@ -1,6 +1,7 @@
 
 package com.edwin.web;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -20,6 +21,28 @@ public static Session getSession(){
         DAO.t1.set(session);
        }
     return session;
+    }
+
+protected void begin(){
+    getSession().beginTransaction();
 }
+protected void commit(){
+    getSession().beginTransaction().commit();
+}
+
+protected void rollback(){
+    try {
+        getSession().getTransaction().rollback();
+        getSession().close();
+        
+        }catch(HibernateException e){ }
+        DAO.t1.set(null);
+        }
+public static void close(){
+    getSession().close();
+    DAO.t1.set(null);
+ }
+
+
     
 }
