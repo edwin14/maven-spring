@@ -2,6 +2,7 @@
 
 package com.edwin.web;
 
+import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,6 +19,16 @@ public class ControllerUsuario {
         
         
         return mensajito;
+    }
+    
+    
+    @RequestMapping(value="/usuario2", method=RequestMethod.GET, headers=("Accept=Application/json"))
+    
+    public @ResponseBody ArrayList<Usuario2> mostrar(){
+        
+        ArrayList<Usuario2> adios = DAOUsuarioImpl.implementar();
+        
+        return adios;
     }
     
 }
