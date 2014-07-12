@@ -21,8 +21,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "usuario2")
-@NamedQueries({
-    @NamedQuery(name = "Usuario2.findAll", query = "SELECT u FROM Usuario2 u")})
 public class Usuario2 implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -39,14 +37,14 @@ public class Usuario2 implements Serializable {
     public Usuario2() {
     }
 
-    public Usuario2(String login) {
-        this.login = login;
-    }
-
     public Usuario2(String login, String password, String adminRol) {
         this.login = login;
         this.password = password;
         this.adminRol = adminRol;
+    }
+
+    public Usuario2(String login) {
+        this.login = login;
     }
 
     public String getLogin() {

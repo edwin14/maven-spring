@@ -7,5 +7,6 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <mapping class="com.edwin.web.UsuarioMapeo"></mapping>
+    <mapping class="com.edwin.web.Usuario2"></mapping>
   </session-factory>
 </hibernate-configuration>
