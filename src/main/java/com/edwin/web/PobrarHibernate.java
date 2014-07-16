@@ -18,7 +18,7 @@ public class PobrarHibernate {
        //paso 1 empezar la sesion
        sesion.getTransaction().begin();
        //paso 2 HACER UNA OPERACION!!!
-            //sesion.save(new Usuario2("emorales2", "xxx", "y"));
+            sesion.save(new Usuario2("emorales2", "xxx", "y"));
        
             //sesion.update(new Usuario2("kcruces", "kkk", "c"));
             
@@ -29,12 +29,14 @@ public class PobrarHibernate {
                 System.out.println(usu);
            }
       */
-               
-       Criteria c = sesion.createCriteria(Usuario2.class);
-       ArrayList<Usuario2> usuarios=(ArrayList<Usuario2>)  c.list();
+       
+       /*
+            Criteria c = sesion.createCriteria(Usuario2.class);
+            ArrayList<Usuario2> usuarios=(ArrayList<Usuario2>)  c.list();
             for(Usuario2 usu:usuarios){
                 System.out.println(usu);
             } c.list();
+        */
             
        //paso 3 hacer el commit
        sesion.getTransaction().commit();
